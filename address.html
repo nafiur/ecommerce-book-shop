@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>আমার ড্যাশবোর্ড - রকমারি ডট কম</title>
+    <title>আমার ঠিকানা - রকমারি ডট কম</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -166,7 +166,7 @@
                         <p class="text-muted small mb-0">nafiur@example.com</p>
                     </div>
                     <div class="list-group list-group-flush bangla">
-                        <a href="dashboard.html" class="list-group-item list-group-item-action active border-0">
+                        <a href="dashboard.html" class="list-group-item list-group-item-action border-0">
                             <i class="fas fa-tachometer-alt me-2"></i> ড্যাশবোর্ড
                         </a>
                         <a href="orders.html" class="list-group-item list-group-item-action border-0">
@@ -178,7 +178,7 @@
                         <a href="profile-edit.html" class="list-group-item list-group-item-action border-0">
                             <i class="fas fa-user me-2"></i> প্রোফাইল এডিট
                         </a>
-                        <a href="address.html" class="list-group-item list-group-item-action border-0">
+                        <a href="address.html" class="list-group-item list-group-item-action active border-0">
                             <i class="fas fa-map-marker-alt me-2"></i> ঠিকানা
                         </a>
                         <a href="index.html" class="list-group-item list-group-item-action border-0 text-danger">
@@ -188,133 +188,106 @@
                 </div>
             </div>
 
-            <!-- Dashboard Content -->
+            <!-- Address Content -->
             <div class="col-lg-9">
-                <!-- Stats Cards -->
-                <div class="row g-3 mb-4">
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm bg-primary bg-opacity-10 h-100">
-                            <div class="card-body d-flex align-items-center gap-3">
-                                <div class="bg-primary text-white rounded-circle p-3">
-                                    <i class="fas fa-shopping-cart fa-lg"></i>
-                                </div>
-                                <div>
-                                    <h3 class="fw-bold mb-0 bangla">১২</h3>
-                                    <p class="text-muted small mb-0 bangla">মোট অর্ডার</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm bg-warning bg-opacity-10 h-100">
-                            <div class="card-body d-flex align-items-center gap-3">
-                                <div class="bg-warning text-white rounded-circle p-3">
-                                    <i class="fas fa-clock fa-lg"></i>
-                                </div>
-                                <div>
-                                    <h3 class="fw-bold mb-0 bangla">২</h3>
-                                    <p class="text-muted small mb-0 bangla">পেন্ডিং অর্ডার</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm bg-danger bg-opacity-10 h-100">
-                            <div class="card-body d-flex align-items-center gap-3">
-                                <div class="bg-danger text-white rounded-circle p-3">
-                                    <i class="fas fa-heart fa-lg"></i>
-                                </div>
-                                <div>
-                                    <h3 class="fw-bold mb-0 bangla">৫</h3>
-                                    <p class="text-muted small mb-0 bangla">উইশলিস্ট</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Orders -->
-                <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                        <h5 class="bangla fw-bold mb-0">সাম্প্রতিক অর্ডার</h5>
-                        <a href="orders.html" class="btn btn-sm btn-outline-primary bangla">সব দেখুন</a>
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle mb-0 bangla">
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th class="ps-4">অর্ডার আইডি</th>
-                                        <th>তারিখ</th>
-                                        <th>স্ট্যাটাস</th>
-                                        <th>মোট</th>
-                                        <th class="pe-4 text-end">অ্যাকশন</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="ps-4 fw-bold">#ROK-2024-001</td>
-                                        <td>৩০ নভেম্বর, ২০২৪</td>
-                                        <td><span class="badge bg-warning text-dark">প্রসেসিং</span></td>
-                                        <td>৳৩৫০</td>
-                                        <td class="pe-4 text-end">
-                                            <button class="btn btn-sm btn-light text-primary"><i
-                                                    class="fas fa-eye"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-4 fw-bold">#ROK-2024-002</td>
-                                        <td>২৮ নভেম্বর, ২০২৪</td>
-                                        <td><span class="badge bg-success">ডেলিভারড</span></td>
-                                        <td>৳১,২০০</td>
-                                        <td class="pe-4 text-end">
-                                            <button class="btn btn-sm btn-light text-primary"><i
-                                                    class="fas fa-eye"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="ps-4 fw-bold">#ROK-2024-003</td>
-                                        <td>২৫ নভেম্বর, ২০২৪</td>
-                                        <td><span class="badge bg-danger">ক্যানসেলড</span></td>
-                                        <td>৳৪৫০</td>
-                                        <td class="pe-4 text-end">
-                                            <button class="btn btn-sm btn-light text-primary"><i
-                                                    class="fas fa-eye"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Account Info -->
                 <div class="card border-0 shadow-sm">
                     <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
-                        <h5 class="bangla fw-bold mb-0">একাউন্ট তথ্য</h5>
-                        <a href="profile-edit.html" class="btn btn-sm btn-outline-primary bangla"><i
-                                class="fas fa-edit me-1"></i> এডিট</a>
+                        <h5 class="bangla fw-bold mb-0">আমার ঠিকানা</h5>
+                        <button class="btn btn-primary bangla" data-bs-toggle="modal" data-bs-target="#addAddressModal">
+                            <i class="fas fa-plus me-1"></i> নতুন ঠিকানা
+                        </button>
                     </div>
                     <div class="card-body">
-                        <div class="row g-3">
+                        <div class="row g-4">
+                            <!-- Address Card 1 -->
                             <div class="col-md-6">
-                                <p class="text-muted small mb-1 bangla">নাম</p>
-                                <h6 class="bangla fw-bold">নাফিউর রহমান</h6>
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body position-relative">
+                                        <span
+                                            class="badge bg-primary position-absolute top-0 end-0 m-3 bangla">ডিফল্ট</span>
+                                        <h6 class="fw-bold bangla mb-2">বাসা</h6>
+                                        <p class="mb-1 bangla"><strong>নাফিউর রহমান</strong></p>
+                                        <p class="mb-1 bangla">ফ্ল্যাট ৪বি, বাড়ি ১২, রোড ৫</p>
+                                        <p class="mb-1 bangla">মিরপুর, ঢাকা-১২১৬</p>
+                                        <p class="mb-3 bangla">ফোন: +৮৮০ ১৭১১-০০০০০০</p>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-sm btn-outline-primary bangla">এডিট</button>
+                                            <button class="btn btn-sm btn-outline-danger bangla">ডিলিট</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- Address Card 2 -->
                             <div class="col-md-6">
-                                <p class="text-muted small mb-1 bangla">ইমেইল</p>
-                                <h6 class="bangla fw-bold">nafiur@example.com</h6>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="text-muted small mb-1 bangla">ফোন</p>
-                                <h6 class="bangla fw-bold">+৮৮০ ১৭১১-০০০০০০</h6>
-                            </div>
-                            <div class="col-md-6">
-                                <p class="text-muted small mb-1 bangla">ঠিকানা</p>
-                                <h6 class="bangla fw-bold">মিরপুর, ঢাকা-১২১৬</h6>
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h6 class="fw-bold bangla mb-2">অফিস</h6>
+                                        <p class="mb-1 bangla"><strong>নাফিউর রহমান</strong></p>
+                                        <p class="mb-1 bangla">লেভেল ১০, সফটওয়্যার পার্ক</p>
+                                        <p class="mb-1 bangla">কাওরান বাজার, ঢাকা-১২১৫</p>
+                                        <p class="mb-3 bangla">ফোন: +৮৮০ ১৭১১-০০০০০০</p>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-sm btn-outline-primary bangla">এডিট</button>
+                                            <button class="btn btn-sm btn-outline-danger bangla">ডিলিট</button>
+                                            <button class="btn btn-sm btn-link text-decoration-none bangla">ডিফল্ট
+                                                করুন</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Address Modal -->
+    <div class="modal fade" id="addAddressModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title bangla fw-bold">নতুন ঠিকানা যোগ করুন</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label bangla">লেবেল (যেমন: বাসা, অফিস)</label>
+                            <input type="text" class="form-control bangla" placeholder="বাসা">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label bangla">নাম</label>
+                            <input type="text" class="form-control bangla" value="নাফিউর রহমান">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label bangla">ফোন</label>
+                            <input type="tel" class="form-control bangla" value="+৮৮০">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label bangla">ঠিকানা</label>
+                            <textarea class="form-control bangla" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label bangla">শহর</label>
+                            <select class="form-select bangla">
+                                <option selected>ঢাকা</option>
+                                <option>চট্টগ্রাম</option>
+                                <option>সিলেট</option>
+                                <option>রাজশাহী</option>
+                            </select>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="defaultAddress">
+                            <label class="form-check-label bangla" for="defaultAddress">
+                                ডিফল্ট ঠিকানা হিসেবে ব্যবহার করুন
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary bangla" data-bs-dismiss="modal">বন্ধ করুন</button>
+                    <button type="button" class="btn btn-primary bangla">সেভ করুন</button>
                 </div>
             </div>
         </div>
