@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জনপ্রিয় লেখক - রকমারি ডট কম</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-links">
+                    <a href="#"><i class="fas fa-phone"></i> <span class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
+                    <a href="#"><i class="fas fa-envelope"></i> support@rokomari.com</a>
+                </div>
+                <div class="header-links">
+                    <a href="#" class="bangla"><i class="fas fa-truck"></i> অর্ডার ট্র্যাক করুন</a>
+                    <a href="#" class="bangla"><i class="fas fa-user"></i> একাউন্ট</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo bangla">
+                        <i class="fas fa-book-open"></i> রকমারি
+                    </a>
+
+                    <div class="search-bar">
+                        <input type="text" class="search-input bangla" placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                        <button class="search-btn bangla">
+                            <i class="fas fa-search"></i> সার্চ
+                        </button>
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="icon-btn" title="উইশলিস্ট">
+                            <i class="fas fa-heart"></i>
+                            <span class="badge">৩</span>
+                        </button>
+                        <button class="icon-btn" id="cartBtn" title="কার্ট">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge" id="cartCount">০</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="bangla">হোম</a></li>
+                    <li class="nav-item"><a href="categories.html" class="bangla">ক্যাটাগরি</a></li>
+                    <li class="nav-item"><a href="#" class="bangla">বেস্টসেলার</a></li>
+                    <li class="nav-item"><a href="authors.html" class="bangla">লেখক</a></li>
+                    <li class="nav-item"><a href="#" class="bangla">স্পেশাল অফার</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding: 40px 0;">
+        <div class="container">
+            <h1 class="bangla" style="font-size: 32px; margin-bottom: 30px; color: var(--text-primary);">জনপ্রিয় লেখক
+            </h1>
+
+            <div class="authors-grid" id="authorsGrid">
+                <!-- Authors will be loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="bangla"><i class="fas fa-book-open"></i> রকমারি</h3>
+                    <p class="bangla">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="bangla">কুইক লিংক</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="bangla">হোম</a></li>
+                        <li><a href="categories.html" class="bangla">ক্যাটাগরি</a></li>
+                        <li><a href="authors.html" class="bangla">লেখক</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="bangla">&copy; ২০২৪ রকমারি ডট কম। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

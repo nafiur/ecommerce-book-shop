@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বই - রকমারি ডট কম</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-links">
+                    <a href="#"><i class="fas fa-phone"></i> <span class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
+                    <a href="#"><i class="fas fa-envelope"></i> support@rokomari.com</a>
+                </div>
+                <div class="header-links">
+                    <a href="#" class="bangla"><i class="fas fa-truck"></i> অর্ডার ট্র্যাক করুন</a>
+                    <a href="#" class="bangla"><i class="fas fa-user"></i> একাউন্ট</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo bangla">
+                        <i class="fas fa-book-open"></i> রকমারি
+                    </a>
+
+                    <div class="search-bar">
+                        <input type="text" class="search-input bangla" placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                        <button class="search-btn bangla">
+                            <i class="fas fa-search"></i> সার্চ
+                        </button>
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="icon-btn" title="উইশলিস্ট">
+                            <i class="fas fa-heart"></i>
+                            <span class="badge">৩</span>
+                        </button>
+                        <button class="icon-btn" id="cartBtn" title="কার্ট">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge" id="cartCount">০</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="bangla">হোম</a></li>
+                    <li class="nav-item"><a href="categories.html" class="bangla">ক্যাটাগরি</a></li>
+                    <li class="nav-item"><a href="books.html" class="bangla">বই</a></li>
+                    <li class="nav-item"><a href="authors.html" class="bangla">লেখক</a></li>
+                    <li class="nav-item"><a href="#" class="bangla">স্পেশাল অফার</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div style="background: var(--bg-gray); padding: 12px 0;">
+        <div class="container">
+            <div class="bangla" style="font-size: 14px; color: var(--text-muted);">
+                <a href="index.html" style="color: var(--primary-color);">হোম</a> / <span>বই</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="books-page-container">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h3 class="filter-title bangla">ক্যাটাগরি</h3>
+                    <ul class="filter-options bangla">
+                        <li>
+                            <input type="checkbox" id="cat1">
+                            <label for="cat1">উপন্যাস (২,৪৫০)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat2">
+                            <label for="cat2">ইসলামি বই (১,৮৫০)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat3">
+                            <label for="cat3">একাডেমিক (৩,২৮০)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat4">
+                            <label for="cat4">রহস্য ও গোয়েন্দা (৯৮০)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cat5">
+                            <label for="cat5">শিশু-কিশোর (১,৫৫০)</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title bangla">লেখক</h3>
+                    <ul class="filter-options bangla">
+                        <li>
+                            <input type="checkbox" id="author1">
+                            <label for="author1">হুমায়ূন আহমেদ (২৪৫)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="author2">
+                            <label for="author2">মুহম্মদ জাফর ইকবাল (১১৮)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="author3">
+                            <label for="author3">রবীন্দ্রনাথ ঠাকুর (৫৩২)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="author4">
+                            <label for="author4">আনিসুল হক (৯২)</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title bangla">প্রকাশনী</h3>
+                    <ul class="filter-options bangla">
+                        <li>
+                            <input type="checkbox" id="pub1">
+                            <label for="pub1">প্রথমা প্রকাশন</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pub2">
+                            <label for="pub2">অন্যপ্রকাশ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pub3">
+                            <label for="pub3">সময় প্রকাশন</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pub4">
+                            <label for="pub4">বাংলা একাডেমি</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="filter-section">
+                    <h3 class="filter-title bangla">মূল্য পরিসীমা</h3>
+                    <div class="price-range bangla">
+                        <input type="number" placeholder="সর্বনিম্ন" min="0">
+                        <span>-</span>
+                        <input type="number" placeholder="সর্বোচ্চ" min="0">
+                    </div>
+                    <button class="filter-btn bangla">প্রয়োগ করুন</button>
+                </div>
+            </aside>
+
+            <!-- Main Books Grid -->
+            <main class="main-content">
+                <!-- Sort Bar -->
+                <div class="sort-bar">
+                    <div class="results-count bangla">
+                        <strong>১২</strong> টি বই পাওয়া গেছে
+                    </div>
+                    <div class="sort-options">
+                        <span class="bangla" style="font-size: 14px;">সাজান:</span>
+                        <select class="sort-select bangla">
+                            <option>জনপ্রিয়তা</option>
+                            <option>সর্বশেষ</option>
+                            <option>মূল্য: কম থেকে বেশি</option>
+                            <option>মূল্য: বেশি থেকে কম</option>
+                            <option>নাম: ক-য</option>
+                        </select>
+                        <div class="view-toggle">
+                            <button class="view-btn active"><i class="fas fa-th"></i></button>
+                            <button class="view-btn"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Books Grid -->
+                <div class="books-grid" id="booksGrid">
+                    <!-- Books will be loaded by JavaScript -->
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination bangla">
+                    <button disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="active">১</button>
+                    <button>২</button>
+                    <button>৩</button>
+                    <button>৪</button>
+                    <button>৫</button>
+                    <button>...</button>
+                    <button>১০</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="bangla"><i class="fas fa-book-open"></i> রকমারি</h3>
+                    <p class="bangla">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="bangla">কুইক লিংক</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="bangla">হোম</a></li>
+                        <li><a href="categories.html" class="bangla">ক্যাটাগরি</a></li>
+                        <li><a href="books.html" class="bangla">বই</a></li>
+                        <li><a href="authors.html" class="bangla">লেখক</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="bangla">&copy; ২০২৪ রকমারি ডট কম। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

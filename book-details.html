@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">বইয়ের বিস্তারিত - রকমারি ডট কম</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-links">
+                    <a href="#"><i class="fas fa-phone"></i> <span class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
+                    <a href="#"><i class="fas fa-envelope"></i> support@rokomari.com</a>
+                </div>
+                <div class="header-links">
+                    <a href="#" class="bangla"><i class="fas fa-truck"></i> অর্ডার ট্র্যাক করুন</a>
+                    <a href="#" class="bangla"><i class="fas fa-user"></i> একাউন্ট</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo bangla">
+                        <i class="fas fa-book-open"></i> রকমারি
+                    </a>
+
+                    <div class="search-bar">
+                        <input type="text" class="search-input bangla" placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                        <button class="search-btn bangla">
+                            <i class="fas fa-search"></i> সার্চ
+                        </button>
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="icon-btn" title="উইশলিস্ট">
+                            <i class="fas fa-heart"></i>
+                            <span class="badge">৩</span>
+                        </button>
+                        <button class="icon-btn" id="cartBtn" title="কার্ট">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge" id="cartCount">০</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="bangla">হোম</a></li>
+                    <li class="nav-item"><a href="categories.html" class="bangla">ক্যাটাগরি</a></li>
+                    <li class="nav-item"><a href="books.html" class="bangla">বই</a></li>
+                    <li class="nav-item"><a href="authors.html" class="bangla">লেখক</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div style="background: var(--bg-gray); padding: 12px 0;">
+        <div class="container">
+            <div class="bangla" style="font-size: 14px; color: var(--text-muted);">
+                <a href="index.html" style="color: var(--primary-color);">হোম</a> /
+                <a href="books.html" style="color: var(--primary-color);">বই</a> /
+                <span id="breadcrumbTitle">বইয়ের বিস্তারিত</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Details -->
+    <div class="container">
+        <div class="book-details-container">
+            <!-- Left: Book Image -->
+            <div class="book-image-section">
+                <img id="bookImage" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop"
+                    alt="Book Cover" class="book-main-image">
+            </div>
+
+            <!-- Right: Book Info -->
+            <div class="book-info-section">
+                <h1 id="bookTitle" class="bangla">দেয়াল</h1>
+
+                <div class="book-meta bangla">
+                    <div class="meta-item">
+                        <i class="fas fa-user" style="color: var(--primary-color);"></i>
+                        <span class="meta-label">লেখক:</span>
+                        <span class="meta-value" id="bookAuthor">হুমায়ূন আহমেদ</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-building" style="color: var(--primary-color);"></i>
+                        <span class="meta-label">প্রকাশনী:</span>
+                        <span class="meta-value">অন্যপ্রকাশ</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-tag" style="color: var(--primary-color);"></i>
+                        <span class="meta-label">বিষয়:</span>
+                        <span class="meta-value" id="bookCategory">উপন্যাস</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-star" style="color: #FFA500;"></i>
+                        <span class="stars" style="color: #FFA500;">★★★★★</span>
+                        <span style="color: var(--text-muted); margin-left: 10px;" id="bookReviews">(২,৮৪৭ রিভিউ)</span>
+                    </div>
+                </div>
+
+                <!-- Price Section -->
+                <div class="price-section">
+                    <div class="current-price bangla" id="bookPrice">৳২৮০</div>
+                    <div>
+                        <span class="original-price bangla" id="bookOriginalPrice">৳৩৫০</span>
+                        <span class="save-amount bangla">২০% ছাড় - সাশ্রয় ৳৭০</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn-large btn-cart bangla" onclick="addToCartFromDetails()">
+                        <i class="fas fa-shopping-cart"></i> কার্টে যোগ করুন
+                    </button>
+                    <button class="btn-large btn-buy bangla">
+                        <i class="fas fa-bolt"></i> এখনই কিনুন
+                    </button>
+                </div>
+
+                <!-- Secondary Actions -->
+                <div class="secondary-actions bangla">
+                    <button class="icon-action">
+                        <i class="fas fa-heart"></i> উইশলিস্ট
+                    </button>
+                    <button class="icon-action">
+                        <i class="fas fa-share-alt"></i> শেয়ার করুন
+                    </button>
+                </div>
+
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab-buttons bangla">
+                        <button class="tab-btn active" onclick="switchTab('summary')">সারসংক্ষেপ</button>
+                        <button class="tab-btn" onclick="switchTab('specs')">বিস্তারিত</button>
+                        <button class="tab-btn" onclick="switchTab('reviews')">রিভিউ</button>
+                    </div>
+
+                    <!-- Summary Tab -->
+                    <div id="summary" class="tab-content active">
+                        <div class="bangla" id="bookSummary" style="line-height: 1.8; color: var(--text-secondary);">
+                            <p>এটি একটি অসাধারণ বাংলা উপন্যাস যা পাঠকদের মনে গভীর প্রভাব ফেলে। লেখক তার অনন্য
+                                লেখনীশৈলীতে জীবনের নানা চিত্র তুলে ধরেছেন।</p>
+                            <p>বইটিতে রয়েছে মানুষের আবেগ, সংগ্রাম এবং জীবনের বাস্তবতার অপূর্ব মিশ্রণ। প্রতিটি চরিত্র
+                                জীবন্ত এবং পাঠকের সাথে সংযুক্ত।</p>
+                            <p>এই বইটি বাংলা সাহিত্যের একটি অমূল্য সংযোজন যা সকল বয়সের পাঠকদের জন্য উপযুক্ত।</p>
+                        </div>
+                    </div>
+
+                    <!-- Specifications Tab -->
+                    <div id="specs" class="tab-content">
+                        <table class="specs-table bangla">
+                            <tr>
+                                <td>শিরোনাম</td>
+                                <td id="specTitle">দেয়াল</td>
+                            </tr>
+                            <tr>
+                                <td>লেখক</td>
+                                <td id="specAuthor">হুমায়ূন আহমেদ</td>
+                            </tr>
+                            <tr>
+                                <td>প্রকাশনী</td>
+                                <td>অন্যপ্রকাশ</td>
+                            </tr>
+                            <tr>
+                                <td>ISBN</td>
+                                <td>৯৮৪-৭০-০০০০০-০০-০</td>
+                            </tr>
+                            <tr>
+                                <td>সংস্করণ</td>
+                                <td>১ম প্রকাশ, ২০২৪</td>
+                            </tr>
+                            <tr>
+                                <td>পৃষ্ঠা সংখ্যা</td>
+                                <td>২৪৮</td>
+                            </tr>
+                            <tr>
+                                <td>ভাষা</td>
+                                <td>বাংলা</td>
+                            </tr>
+                            <tr>
+                                <td>বাঁধাই</td>
+                                <td>হার্ডকভার</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Reviews Tab -->
+                    <div id="reviews" class="tab-content">
+                        <div class="review-item bangla">
+                            <div class="review-header">
+                                <div>
+                                    <div class="reviewer-name">রহিম আহমেদ</div>
+                                    <div class="stars" style="color: #FFA500;">★★★★★</div>
+                                </div>
+                                <div class="review-date">১৫ নভেম্বর, ২০২৪</div>
+                            </div>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">অসাধারণ একটি বই! প্রতিটি পাতা
+                                পড়তে পড়তে মুগ্ধ হয়েছি। লেখকের লেখা সত্যিই প্রশংসনীয়।</p>
+                        </div>
+
+                        <div class="review-item bangla">
+                            <div class="review-header">
+                                <div>
+                                    <div class="reviewer-name">সানিয়া খান</div>
+                                    <div class="stars" style="color: #FFA500;">★★★★☆</div>
+                                </div>
+                                <div class="review-date">১০ নভেম্বর, ২০২৪</div>
+                            </div>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">খুবই ভালো লেগেছে। গল্পের বর্ণনা
+                                এবং চরিত্রগুলো দারুণ। সবার পড়া উচিত।</p>
+                        </div>
+
+                        <div class="review-item bangla">
+                            <div class="review-header">
+                                <div>
+                                    <div class="reviewer-name">কামাল হোসেন</div>
+                                    <div class="stars" style="color: #FFA500;">★★★★★</div>
+                                </div>
+                                <div class="review-date">৫ নভেম্বর, ২০২৪</div>
+                            </div>
+                            <p style="color: var(--text-secondary); line-height: 1.6;">বাংলা সাহিত্যের একটি চমৎকার
+                                সংযোজন। পড়ে অনেক ভালো লাগলো।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Books -->
+    <section class="related-books" style="background: white; padding: 40px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title bangla">সম্পর্কিত বই</h2>
+            </div>
+            <div class="books-grid" id="relatedBooksGrid">
+                <!-- Related books will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="bangla"><i class="fas fa-book-open"></i> রকমারি</h3>
+                    <p class="bangla">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="bangla">কুইক লিংক</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="bangla">হোম</a></li>
+                        <li><a href="books.html" class="bangla">বই</a></li>
+                        <li><a href="authors.html" class="bangla">লেখক</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="bangla">&copy; ২০২৪ রকমারি ডট কম। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/book-details.js"></script>
+</body>
+
+</html>
