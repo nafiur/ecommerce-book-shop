@@ -112,3 +112,8 @@ function updateCartSummary(subtotal) {
     $('#shippingCharge').text(toBengaliNumber(shipping));
     $('#cartTotal').text(toBengaliNumber(total));
 }
+
+// Checkout Button Handler
+$(document).on('click', '.btn-primary:contains("চেকআউট করুন")', function() {
+    window.location.href = 'checkout.html';
+});
