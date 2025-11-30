@@ -277,7 +277,7 @@ $(document).ready(function() {
   
   // Cart Button Click
   $('#cartBtn').on('click', function() {
-    alert('কার্ট পেজ শীঘ্রই আসছে!');
+    window.location.href = 'cart.html';
   });
   
   // Mobile Menu Toggle
