@@ -279,4 +279,25 @@ $(document).ready(function() {
   $('#cartBtn').on('click', function() {
     alert('কার্ট পেজ শীঘ্রই আসছে!');
   });
+  
+  // Mobile Menu Toggle
+  $('#mobileMenuToggle').on('click', function() {
+    $('.mobile-menu').addClass('active');
+    $('.mobile-menu-overlay').addClass('active');
+    $('body').css('overflow', 'hidden');
+  });
+  
+  // Close mobile menu
+  $('.mobile-menu-close, .mobile-menu-overlay').on('click', function() {
+    $('.mobile-menu').removeClass('active');
+    $('.mobile-menu-overlay').removeClass('active');
+    $('body').css('overflow', '');
+  });
+  
+  // Close menu when clicking on a link
+  $('.mobile-menu-link').on('click', function() {
+    $('.mobile-menu').removeClass('active');
+    $('.mobile-menu-overlay').removeClass('active');
+    $('body').css('overflow', '');
+  });
 });

@@ -1,0 +1,136 @@
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay"></div>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="mobile-menu">
+    <div class="mobile-menu-header">
+        <h5 class="bangla mb-0"><i class="fas fa-book-open me-2"></i>রকমারি</h5>
+        <button class="mobile-menu-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+            <a href="index.html" class="mobile-menu-link bangla PAGE_HOME_ACTIVE">
+                <i class="fas fa-home"></i>হোম
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="categories.html" class="mobile-menu-link bangla PAGE_CATEGORIES_ACTIVE">
+                <i class="fas fa-th-large"></i>ক্যাটাগরি
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="books.html" class="mobile-menu-link bangla PAGE_BOOKS_ACTIVE">
+                <i class="fas fa-book"></i>বই
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="authors.html" class="mobile-menu-link bangla PAGE_AUTHORS_ACTIVE">
+                <i class="fas fa-pen-fancy"></i>লেখক
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link bangla">
+                <i class="fas fa-tags"></i>স্পেশাল অফার
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link bangla">
+                <i class="fas fa-blog"></i>ব্লগ
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link bangla">
+                <i class="fas fa-envelope"></i>যোগাযোগ
+            </a>
+        </li>
+        <li class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link bangla">
+                <i class="fas fa-user"></i>সাইন ইন
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Header Top -->
+<div class="header-top bg-success text-white py-2 d-none d-md-block">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-3">
+                <a href="#" class="text-white text-decoration-none"><i class="fas fa-phone"></i> <span
+                        class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
+                <a href="#" class="text-white text-decoration-none"><i class="fas fa-envelope"></i>
+                    support@rokomari.com</a>
+            </div>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-white text-decoration-none bangla"><i class="fas fa-truck"></i> অর্ডার
+                    ট্র্যাক করুন</a>
+                <a href="#" class="text-white text-decoration-none bangla"><i class="fas fa-user"></i> একাউন্ট</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Header -->
+<header class="sticky-top bg-white shadow-sm">
+    <div class="container py-3">
+        <div class="row align-items-center g-2">
+            <!-- Mobile Menu Toggle + Logo -->
+            <div class="col-6 col-lg-3 d-flex align-items-center gap-2">
+                <!-- Mobile Menu Toggle (visible only on mobile/tablet) -->
+                <button class="btn btn-link text-dark p-0 d-lg-none" id="mobileMenuToggle">
+                    <i class="fas fa-bars fs-4"></i>
+                </button>
+
+                <!-- Logo -->
+                <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2">
+                    <i class="fas fa-book-open text-success fs-2"></i>
+                    <span class="fs-3 fw-bold text-primary bangla">রকমারি</span>
+                </a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="col-12 col-lg-6 order-3 order-lg-2">
+                <div class="input-group">
+                    <input type="text" class="form-control border-primary search-input bangla"
+                        placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                    <button class="btn btn-primary bangla" type="button">
+                        <i class="fas fa-search"></i> সার্চ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Icons (Wishlist + Cart) -->
+            <div class="col-6 col-lg-3 order-2 order-lg-3 text-end">
+                <button class="btn btn-link text-dark position-relative me-2 d-none d-lg-inline-block">
+                    <i class="fas fa-heart fs-4"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+                </button>
+                <button class="btn btn-link text-dark position-relative" id="cartBtn">
+                    <i class="fas fa-shopping-cart fs-4"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                        id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation (Desktop only) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-top d-none d-lg-block">
+        <div class="container">
+            <ul class="navbar-nav mx-auto gap-3">
+                <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold PAGE_HOME_ACTIVE">হোম</a></li>
+                <li class="nav-item"><a href="categories.html"
+                        class="nav-link bangla fw-bold PAGE_CATEGORIES_ACTIVE">ক্যাটাগরি</a></li>
+                <li class="nav-item"><a href="books.html" class="nav-link bangla fw-bold PAGE_BOOKS_ACTIVE">বই</a></li>
+                <li class="nav-item"><a href="#bestsellers" class="nav-link bangla fw-bold">বেস্টসেলার</a></li>
+                <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold PAGE_AUTHORS_ACTIVE">লেখক</a>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link bangla fw-bold">স্পেশাল অফার</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
