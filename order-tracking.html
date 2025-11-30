@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অর্ডার ট্র্যাকিং - বইয়ের বাড়ি</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <style>
+        .tracking-timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #e9ecef;
+        }
+
+        .tracking-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+
+        .tracking-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--primary-color);
+        }
+
+        .tracking-item.active::before {
+            background: var(--primary-color);
+        }
+
+        .tracking-item:last-child {
+            padding-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <h5 class="bangla mb-0"><i class="fas fa-book-open me-2"></i>বইয়ের বাড়ি</h5>
+            <button class="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <a href="index.html" class="mobile-menu-link bangla">
+                    <i class="fas fa-home"></i>হোম
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="categories.html" class="mobile-menu-link bangla">
+                    <i class="fas fa-th-large"></i>ক্যাটাগরি
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="books.html" class="mobile-menu-link bangla">
+                    <i class="fas fa-book"></i>বই
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="authors.html" class="mobile-menu-link bangla">
+                    <i class="fas fa-pen-fancy"></i>লেখক
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link bangla">
+                    <i class="fas fa-tags"></i>স্পেশাল অফার
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link bangla">
+                    <i class="fas fa-blog"></i>ব্লগ
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="#" class="mobile-menu-link bangla">
+                    <i class="fas fa-envelope"></i>যোগাযোগ
+                </a>
+            </li>
+            <li class="mobile-menu-item">
+                <a href="login.html" class="mobile-menu-link bangla">
+                    <i class="fas fa-user"></i>সাইন ইন
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Header Top -->
+    <div class="header-top bg-success text-white py-2 d-none d-md-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white text-decoration-none"><i class="fas fa-phone"></i> <span
+                            class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
+                    <a href="#" class="text-white text-decoration-none"><i class="fas fa-envelope"></i>
+                        support@boierbari.com</a>
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="order-tracking.html" class="text-white text-decoration-none bangla fw-bold"><i
+                            class="fas fa-truck"></i> অর্ডার
+                        ট্র্যাক করুন</a>
+                    <a href="dashboard.html" class="text-white text-decoration-none bangla"><i class="fas fa-user"></i>
+                        একাউন্ট</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="sticky-top bg-white shadow-sm">
+        <div class="container py-3">
+            <div class="row align-items-center g-2">
+                <!-- Mobile Menu Toggle + Logo -->
+                <div class="col-6 col-lg-3 d-flex align-items-center gap-2">
+                    <!-- Mobile Menu Toggle (visible only on mobile/tablet) -->
+                    <button class="btn btn-link text-dark p-0 d-lg-none" id="mobileMenuToggle">
+                        <i class="fas fa-bars fs-4"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2">
+                        <i class="fas fa-book-open text-success fs-2"></i>
+                        <span class="fs-3 fw-bold text-primary bangla">বইয়ের বাড়ি</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="col-12 col-lg-6 order-3 order-lg-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-primary search-input bangla"
+                            placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                        <button class="btn btn-primary bangla" type="button">
+                            <i class="fas fa-search"></i> সার্চ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Icons (Wishlist + Cart) -->
+                <div class="col-6 col-lg-3 order-2 order-lg-3 text-end">
+                    <a href="wishlist.html"
+                        class="btn btn-link text-dark position-relative me-2 d-none d-lg-inline-block">
+                        <i class="fas fa-heart fs-4"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+                    </a>
+                    <a href="cart.html" class="btn btn-link text-dark position-relative" id="cartBtn">
+                        <i class="fas fa-shopping-cart fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                            id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation (Desktop only) -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-top d-none d-lg-block">
+            <div class="container">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold">হোম</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link bangla fw-bold">ক্যাটাগরি</a></li>
+                    <li class="nav-item"><a href="books.html" class="nav-link bangla fw-bold">বই</a></li>
+                    <li class="nav-item"><a href="#bestsellers" class="nav-link bangla fw-bold">বেস্টসেলার</a></li>
+                    <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link bangla fw-bold">স্পেশাল অফার</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item bangla"><a href="index.html" class="text-decoration-none">হোম</a></li>
+                    <li class="breadcrumb-item active bangla" aria-current="page">অর্ডার ট্র্যাকিং</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Tracking Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0" data-aos="fade-up">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="text-center bangla fw-bold mb-4">আপনার অর্ডার ট্র্যাক করুন</h2>
+                            <p class="text-center bangla text-muted mb-4">আপনার অর্ডার আইডি এবং ফোন নম্বর দিয়ে অর্ডারের
+                                বর্তমান অবস্থা জানুন।</p>
+
+                            <form id="trackingForm" class="mb-5">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="orderId" class="form-label bangla fw-bold">অর্ডার আইডি</label>
+                                        <input type="text" class="form-control" id="orderId" placeholder="যেমন: 12345"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label bangla fw-bold">ফোন নম্বর</label>
+                                        <input type="text" class="form-control" id="phone" placeholder="যেমন: 017..."
+                                            required>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg bangla px-5">
+                                            <i class="fas fa-search me-2"></i> ট্র্যাক করুন
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Tracking Result (Hidden by default, shown for demo) -->
+                            <div id="trackingResult" class="border-top pt-4">
+                                <div
+                                    class="d-flex justify-content-between align-items-center mb-4 bg-light p-3 rounded">
+                                    <div>
+                                        <p class="mb-1 bangla text-muted">অর্ডার আইডি:</p>
+                                        <h5 class="fw-bold">#12345</h5>
+                                    </div>
+                                    <div class="text-end">
+                                        <p class="mb-1 bangla text-muted">অর্ডার তারিখ:</p>
+                                        <h6 class="bangla">৩০ নভেম্বর, ২০২৪</h6>
+                                    </div>
+                                </div>
+
+                                <div class="tracking-timeline mt-4 ms-2">
+                                    <div class="tracking-item active">
+                                        <h6 class="fw-bold bangla">অর্ডার প্লেস করা হয়েছে</h6>
+                                        <p class="small text-muted mb-0">৩০ নভেম্বর, ২০২৪ - ১০:৩০ AM</p>
+                                        <p class="small bangla text-success">আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে।</p>
+                                    </div>
+                                    <div class="tracking-item active">
+                                        <h6 class="fw-bold bangla">অর্ডার প্রসেসিং</h6>
+                                        <p class="small text-muted mb-0">৩০ নভেম্বর, ২০২৪ - ০২:১৫ PM</p>
+                                        <p class="small bangla text-success">আপনার অর্ডারটি প্যাকিং এর জন্য প্রস্তুত করা
+                                            হচ্ছে।</p>
+                                    </div>
+                                    <div class="tracking-item">
+                                        <h6 class="fw-bold bangla text-muted">শিপিং</h6>
+                                        <p class="small text-muted mb-0">প্রক্রিয়াধীন...</p>
+                                    </div>
+                                    <div class="tracking-item">
+                                        <h6 class="fw-bold bangla text-muted">ডেলিভারি</h6>
+                                        <p class="small text-muted mb-0">প্রক্রিয়াধীন...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3 class="h5 bangla mb-3"><i class="fas fa-book-open"></i> বইয়ের বাড়ি</h3>
+                    <p class="bangla small text-white-50">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান। ২০১৩ সাল থেকে বই
+                        প্রেমীদের সেবায় নিয়োজিত।</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="bangla h6 fw-bold mb-3">সহায়তা</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla">যোগাযোগ করুন</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla">সচরাচর জিজ্ঞাসা</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla">রিটার্ন পলিসি</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla">শর্তাবলী</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="bangla h6 fw-bold mb-3">আমার একাউন্ট</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="login.html" class="text-white-50 text-decoration-none bangla">সাইন ইন</a></li>
+                        <li><a href="register.html" class="text-white-50 text-decoration-none bangla">রেজিস্ট্রেশন</a>
+                        </li>
+                        <li><a href="orders.html" class="text-white-50 text-decoration-none bangla">অর্ডার হিস্ট্রি</a>
+                        </li>
+                        <li><a href="wishlist.html" class="text-white-50 text-decoration-none bangla">উইশলিস্ট</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="bangla h6 fw-bold mb-3">নিউজলেটার</h5>
+                    <p class="bangla small text-white-50">নতুন বই এবং অফার সম্পর্কে জানতে সাবস্ক্রাইব করুন।</p>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bangla" placeholder="আপনার ইমেইল">
+                        <button class="btn btn-primary bangla" type="button">সাবস্ক্রাইব</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary mt-4 pt-3 text-center">
+                <p class="bangla small text-white-50 mb-0">&copy; ২০২৪ বইয়ের বাড়ি। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Simple script to handle form submission for demo
+        $(document).ready(function () {
+            $('#trackingResult').hide(); // Hide initially
+
+            $('#trackingForm').on('submit', function (e) {
+                e.preventDefault();
+                // Simulate loading
+                const btn = $(this).find('button');
+                const originalText = btn.html();
+                btn.html('<i class="fas fa-spinner fa-spin me-2"></i> খুঁজছে...').prop('disabled', true);
+
+                setTimeout(function () {
+                    btn.html(originalText).prop('disabled', false);
+                    $('#trackingResult').slideDown();
+                    // Scroll to result
+                    $('html, body').animate({
+                        scrollTop: $("#trackingResult").offset().top - 100
+                    }, 500);
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+
+</html>
