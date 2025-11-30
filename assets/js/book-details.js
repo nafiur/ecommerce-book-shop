@@ -17,8 +17,8 @@ function loadBookDetails() {
   }
   
   // Update page title
-  document.title = `${book.title} - রকমারি ডট কম`;
-  $('#pageTitle').text(`${book.title} - রকমারি ডট কম`);
+  document.title = `${book.title} - বইয়ের বাড়ি ডট কম`;
+  $('#pageTitle').text(`${book.title} - বইয়ের বাড়ি ডট কম`);
   
   // Update breadcrumb
   $('#breadcrumbTitle').text(book.title);

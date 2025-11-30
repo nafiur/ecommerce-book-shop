@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 // Load cart items from localStorage
 function loadCartItems() {
-    const cart = JSON.parse(localStorage.getItem('rokomariCart')) || [];
+    const cart = JSON.parse(localStorage.getItem('boierbariCart')) || [];
     const container = $('#cartItemsContainer');
     
     if (cart.length === 0) {
@@ -70,7 +70,7 @@ function loadCartItems() {
 
 // Update item quantity
 function updateQuantity(id, action) {
-    let cart = JSON.parse(localStorage.getItem('rokomariCart')) || [];
+    let cart = JSON.parse(localStorage.getItem('boierbariCart')) || [];
     const itemIndex = cart.findIndex(item => item.id === id);
 
     if (itemIndex !== -1) {
@@ -85,7 +85,7 @@ function updateQuantity(id, action) {
             }
         }
         
-        localStorage.setItem('rokomariCart', JSON.stringify(cart));
+        localStorage.setItem('boierbariCart', JSON.stringify(cart));
         loadCartItems();
         updateCartCount(); // From main.js
     }
@@ -95,10 +95,10 @@ function updateQuantity(id, action) {
 function removeFromCart(id) {
     if(!confirm('আপনি কি নিশ্চিত যে এই বইটি কার্ট থেকে মুছে ফেলতে চান?')) return;
 
-    let cart = JSON.parse(localStorage.getItem('rokomariCart')) || [];
+    let cart = JSON.parse(localStorage.getItem('boierbariCart')) || [];
     cart = cart.filter(item => item.id !== id);
     
-    localStorage.setItem('rokomariCart', JSON.stringify(cart));
+    localStorage.setItem('boierbariCart', JSON.stringify(cart));
     loadCartItems();
     updateCartCount(); // From main.js
 }

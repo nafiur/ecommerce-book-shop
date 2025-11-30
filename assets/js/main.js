@@ -135,12 +135,12 @@ const booksData = [
 ];
 
 const authorsData = [
-  { id: 1, name: "হুমায়ূন আহমেদ", books: 350, avatar: "https://ds.rokomari.store/rokomari110/people/20230507/1683442566_Humayun_Ahmed.jpg" },
-  { id: 2, name: "মুহম্মদ জাফর ইকবাল", books: 120, avatar: "https://ds.rokomari.store/rokomari110/people/20230507/1683442566_Muhammed_Zafar_Iqbal.jpg" },
-  { id: 3, name: "রবীন্দ্রনাথ ঠাকুর", books: 500, avatar: "https://ds.rokomari.store/rokomari110/people/20230507/1683442566_Rabindranath_Tagore.jpg" },
-  { id: 4, name: "কাজী নজরুল ইসলাম", books: 400, avatar: "https://ds.rokomari.store/rokomari110/people/20230507/1683442566_Kazi_Nazrul_Islam.jpg" },
-  { id: 5, name: "শরৎচন্দ্র চট্টোপাধ্যায়", books: 150, avatar: "https://ds.rokomari.store/rokomari110/people/20230507/1683442566_Sarat_Chandra_Chattopadhyay.jpg" },
-  { id: 6, name: "আরিফ আজাদ", books: 15, avatar: "https://ds.rokomari.store/rokomari110/people/20230507/1683442566_Arif_Azad.jpg" }
+  { id: 1, name: "হুমায়ূন আহমেদ", books: 350, avatar: "https://ds.boierbari.store/boierbari110/people/20230507/1683442566_Humayun_Ahmed.jpg" },
+  { id: 2, name: "মুহম্মদ জাফর ইকবাল", books: 120, avatar: "https://ds.boierbari.store/boierbari110/people/20230507/1683442566_Muhammed_Zafar_Iqbal.jpg" },
+  { id: 3, name: "রবীন্দ্রনাথ ঠাকুর", books: 500, avatar: "https://ds.boierbari.store/boierbari110/people/20230507/1683442566_Rabindranath_Tagore.jpg" },
+  { id: 4, name: "কাজী নজরুল ইসলাম", books: 400, avatar: "https://ds.boierbari.store/boierbari110/people/20230507/1683442566_Kazi_Nazrul_Islam.jpg" },
+  { id: 5, name: "শরৎচন্দ্র চট্টোপাধ্যায়", books: 150, avatar: "https://ds.boierbari.store/boierbari110/people/20230507/1683442566_Sarat_Chandra_Chattopadhyay.jpg" },
+  { id: 6, name: "আরিফ আজাদ", books: 15, avatar: "https://ds.boierbari.store/boierbari110/people/20230507/1683442566_Arif_Azad.jpg" }
 ];
 
 // Bengali Number Helper
@@ -150,7 +150,7 @@ function toBengaliNumber(num) {
 }
 
 // Cart Logic
-let cart = JSON.parse(localStorage.getItem('rokomariCart')) || [];
+let cart = JSON.parse(localStorage.getItem('boierbariCart')) || [];
 
 function updateCartCount() {
   $('#cartCount').text(toBengaliNumber(cart.length));
@@ -160,7 +160,7 @@ function addToCart(bookId) {
   const book = booksData.find(b => b.id === bookId);
   if (book) {
     cart.push(book);
-    localStorage.setItem('rokomariCart', JSON.stringify(cart));
+    localStorage.setItem('boierbariCart', JSON.stringify(cart));
     updateCartCount();
     alert('বইটি কার্টে যুক্ত হয়েছে!');
   }

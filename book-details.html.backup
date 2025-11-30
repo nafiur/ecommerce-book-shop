@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">বইয়ের বিস্তারিত - রকমারি ডট কম</title>
+    <title id="pageTitle">বইয়ের বিস্তারিত - বইয়ের বাড়ি ডট কম</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="header-links">
                     <a href="#"><i class="fas fa-phone"></i> <span class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
-                    <a href="#"><i class="fas fa-envelope"></i> support@rokomari.com</a>
+                    <a href="#"><i class="fas fa-envelope"></i> support@boierbari.com</a>
                 </div>
                 <div class="header-links">
                     <a href="#" class="bangla"><i class="fas fa-truck"></i> অর্ডার ট্র্যাক করুন</a>
@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="header-content">
                     <a href="index.html" class="logo bangla">
-                        <i class="fas fa-book-open"></i> রকমারি
+                        <i class="fas fa-book-open"></i> বইয়ের বাড়ি
                     </a>
 
                     <div class="search-bar">
@@ -201,7 +201,7 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-section">
-                        <h3 class="bangla"><i class="fas fa-book-open"></i> রকমারি</h3>
+                        <h3 class="bangla"><i class="fas fa-book-open"></i> বইয়ের বাড়ি</h3>
                         <p class="bangla">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।</p>
                     </div>
                     <div class="footer-section">
@@ -214,7 +214,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p class="bangla">&copy; ২০২৪ রকমারি ডট কম। সর্বস্বত্ব সংরক্ষিত।</p>
+                    <p class="bangla">&copy; ২০২৪ বইয়ের বাড়ি ডট কম। সর্বস্বত্ব সংরক্ষিত।</p>
                 </div>
             </div>
         </footer>

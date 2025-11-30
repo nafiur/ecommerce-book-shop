@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 // Load Checkout Summary
 function loadCheckoutSummary() {
-    const cart = JSON.parse(localStorage.getItem('rokomariCart')) || [];
+    const cart = JSON.parse(localStorage.getItem('boierbariCart')) || [];
     const container = $('#checkoutItems');
     
     if (cart.length === 0) {
@@ -60,7 +60,7 @@ function placeOrder() {
     // For now, we'll simulate a successful order
     
     // Clear Cart
-    localStorage.removeItem('rokomariCart');
+    localStorage.removeItem('boierbariCart');
     
     // Redirect to Success Page
     window.location.href = 'order-success.html';
