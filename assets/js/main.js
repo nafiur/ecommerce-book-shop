@@ -11,7 +11,7 @@ const booksData = [
     discount: 25,
     rating: 4.8,
     reviews: 120,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Himu_Somogro_1-Humayun_Ahmed-70f80-11658.jpg",
+    image: "assets/images/deyal.png",
     badge: "বেস্টসেলার",
     category: "উপন্যাস"
   },
@@ -24,7 +24,7 @@ const booksData = [
     discount: 25,
     rating: 4.9,
     reviews: 250,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Paradoxical_Sajid_1-Arif_Azad-8e503-138345.jpg",
+    image: "assets/images/book1.png",
     badge: "জনপ্রিয়",
     category: "ইসলামি"
   },
@@ -37,7 +37,7 @@ const booksData = [
     discount: 21,
     rating: 4.7,
     reviews: 95,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Misir_Ali_Somogro_1-Humayun_Ahmed-73236-11665.jpg",
+    image: "assets/images/book2.png",
     badge: "নতুন",
     category: "উপন্যাস"
   },
@@ -50,7 +50,7 @@ const booksData = [
     discount: 20,
     rating: 4.8,
     reviews: 180,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Bela_Furabar_Age-Arif_Azad-63071-200926.jpg",
+    image: "assets/images/book3.png",
     badge: "বেস্টসেলার",
     category: "ইসলামি"
   },
@@ -63,7 +63,7 @@ const booksData = [
     discount: 20,
     rating: 4.9,
     reviews: 150,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Sanchita-Kazi_Nazrul_Islam-8a353-12508.jpg",
+    image: "assets/images/book1.png",
     badge: "ক্লাসিক",
     category: "কবিতা"
   },
@@ -76,7 +76,7 @@ const booksData = [
     discount: 16,
     rating: 4.8,
     reviews: 130,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Gitanjali-Rabindranath_Tagore-8a353-12509.jpg",
+    image: "assets/images/book2.png",
     badge: "ক্লাসিক",
     category: "কবিতা"
   },
@@ -89,7 +89,7 @@ const booksData = [
     discount: 22,
     rating: 4.9,
     reviews: 200,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Ekattorer_Dinguli-Jahanara_Imam-8a353-12510.jpg",
+    image: "assets/images/book3.png",
     badge: "মুক্তিযুদ্ধ",
     category: "ইতিহাস"
   },
@@ -102,7 +102,7 @@ const booksData = [
     discount: 26,
     rating: 4.7,
     reviews: 110,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Aguner_Poroshmoni-Humayun_Ahmed-8a353-12511.jpg",
+    image: "assets/images/deyal.png",
     badge: "জনপ্রিয়",
     category: "উপন্যাস"
   },
@@ -115,7 +115,7 @@ const booksData = [
     discount: 24,
     rating: 4.6,
     reviews: 80,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Crutch_er_Colonel-Shahaduzaman-8a353-12512.jpg",
+    image: "assets/images/book1.png",
     badge: "ইতিহাস",
     category: "ইতিহাস"
   },
@@ -128,7 +128,7 @@ const booksData = [
     discount: 25,
     rating: 4.5,
     reviews: 90,
-    image: "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Noukadubi-Rabindranath_Tagore-8a353-12513.jpg",
+    image: "assets/images/book2.png",
     badge: "ক্লাসিক",
     category: "উপন্যাস"
   }
