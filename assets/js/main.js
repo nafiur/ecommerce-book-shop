@@ -300,4 +300,20 @@ $(document).ready(function() {
     $('.mobile-menu-overlay').removeClass('active');
     $('body').css('overflow', '');
   });
+  
+  // Smooth scroll for anchor links
+  $('a[href^="#"]').on('click', function(e) {
+    const target = $(this.getAttribute('href'));
+    if (target.length) {
+      e.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 100
+      }, 600);
+    }
+  });
+  
+  // Prevent page jump on hash links
+  $('a[href="#"]').on('click', function(e) {
+    e.preventDefault();
+  });
 });
