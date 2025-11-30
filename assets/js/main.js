@@ -176,7 +176,7 @@ function createBookCard(book) {
   const col = $('<div>').addClass('col');
   
   const card = `
-    <div class="card h-100 book-card border-0 shadow-sm" data-id="${book.id}">
+    <div class="card h-100 book-card border-0 shadow-sm" data-id="${book.id}" data-aos="fade-up" data-aos-duration="600">
       <div class="position-relative">
         <img src="${book.image}" alt="${book.title}" class="card-img-top book-image">
         <span class="position-absolute top-0 end-0 m-2 badge bg-danger bangla">${book.badge}</span>
@@ -274,6 +274,16 @@ $(document).ready(function() {
   loadBooks();
   loadAuthors();
   updateCartCount();
+  
+  // Initialize AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 50
+    });
+  }
   
   // Cart Button Click
   $('#cartBtn').on('click', function() {
