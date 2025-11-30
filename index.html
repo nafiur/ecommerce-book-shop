@@ -4,87 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="রকমারি ডট কম - বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান। বই, ইলেকট্রনিক্স এবং আরও অনেক কিছু কিনুন সেরা দামে।">
+    <meta name="description" content="রকমারি ডট কম - বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।">
     <title>রকমারি ডট কম | বই, ইলেকট্রনিক্স এবং আরও অনেক কিছু</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <!-- Header Top -->
-        <div class="header-top">
-            <div class="container">
-                <div class="header-links">
-                    <a href="#"><i class="fas fa-phone"></i> <span class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
-                    <a href="#"><i class="fas fa-envelope"></i> support@rokomari.com</a>
+
+    <!-- Header Top -->
+    <div class="header-top bg-success text-white py-2 d-none d-md-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white text-decoration-none"><i class="fas fa-phone"></i> <span
+                            class="bangla">+৮৮০-১৮০০-০০০-০০০</span></a>
+                    <a href="#" class="text-white text-decoration-none"><i class="fas fa-envelope"></i>
+                        support@rokomari.com</a>
                 </div>
-                <div class="header-links">
-                    <a href="#" class="bangla"><i class="fas fa-truck"></i> অর্ডার ট্র্যাক করুন</a>
-                    <a href="#" class="bangla"><i class="fas fa-user"></i> একাউন্ট</a>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white text-decoration-none bangla"><i class="fas fa-truck"></i> অর্ডার
+                        ট্র্যাক করুন</a>
+                    <a href="#" class="text-white text-decoration-none bangla"><i class="fas fa-user"></i> একাউন্ট</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Header Main -->
-        <div class="header-main">
-            <div class="container">
-                <div class="header-content">
-                    <a href="index.html" class="logo bangla">
-                        <i class="fas fa-book-open"></i> রকমারি
+    <!-- Main Header -->
+    <header class="sticky-top bg-white shadow-sm">
+        <div class="container py-3">
+            <div class="row align-items-center g-3">
+                <!-- Logo -->
+                <div class="col-6 col-md-3">
+                    <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2">
+                        <i class="fas fa-book-open text-success fs-2"></i>
+                        <span class="fs-3 fw-bold text-primary bangla">রকমারি</span>
                     </a>
+                </div>
 
-                    <div class="search-bar">
-                        <input type="text" class="search-input bangla" placeholder="বই, লেখক বা ISBN সার্চ করুন...">
-                        <button class="search-btn bangla">
+                <!-- Search Bar -->
+                <div class="col-12 col-md-6 order-3 order-md-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-primary search-input bangla"
+                            placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                        <button class="btn btn-primary bangla" type="button">
                             <i class="fas fa-search"></i> সার্চ
                         </button>
                     </div>
+                </div>
 
-                    <div class="header-actions">
-                        <button class="icon-btn" title="উইশলিস্ট">
-                            <i class="fas fa-heart"></i>
-                            <span class="badge">৩</span>
-                        </button>
-                        <button class="icon-btn" id="cartBtn" title="কার্ট">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="badge" id="cartCount">০</span>
-                        </button>
-                    </div>
+                <!-- Icons -->
+                <div class="col-6 col-md-3 order-2 order-md-3 text-end">
+                    <button class="btn btn-link text-dark position-relative me-2">
+                        <i class="fas fa-heart fs-4"></i>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+                    </button>
+                    <button class="btn btn-link text-dark position-relative" id="cartBtn">
+                        <i class="fas fa-shopping-cart fs-4"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                            id="cartCount">0</span>
+                    </button>
                 </div>
             </div>
         </div>
 
         <!-- Navigation -->
-        <nav class="nav">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-top">
             <div class="container">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="bangla">হোম</a></li>
-                    <li class="nav-item"><a href="categories.html" class="bangla">ক্যাটাগরি</a></li>
-                    <li class="nav-item"><a href="books.html" class="bangla">বই</a></li>
-                    <li class="nav-item"><a href="#bestsellers" class="bangla">বেস্টসেলার</a></li>
-                    <li class="nav-item"><a href="authors.html" class="bangla">লেখক</a></li>
-                    <li class="nav-item"><a href="#" class="bangla">স্পেশাল অফার</a></li>
-                    <li class="nav-item"><a href="#" class="bangla">ই-বুক</a></li>
-                </ul>
+                <button class="navbar-toggler w-100" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span> <span class="bangla ms-2">মেনু</span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-3">
+                        <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold active">হোম</a></li>
+                        <li class="nav-item"><a href="categories.html" class="nav-link bangla fw-bold">ক্যাটাগরি</a>
+                        </li>
+                        <li class="nav-item"><a href="books.html" class="nav-link bangla fw-bold">বই</a></li>
+                        <li class="nav-item"><a href="#bestsellers" class="nav-link bangla fw-bold">বেস্টসেলার</a></li>
+                        <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link bangla fw-bold">স্পেশাল অফার</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="py-5 bg-white">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="bangla">বইয়ের জগতে স্বাগতম</h1>
-                <p class="bangla">হাজারো বই, সেরা দাম এবং দ্রুত ডেলিভারি। আপনার পছন্দের বই এখনই কিনুন!</p>
-                <div class="btn-group">
-                    <button class="btn btn-primary bangla" onclick="window.location.href='books.html'">
-                        <i class="fas fa-book"></i> বই দেখুন
+            <div class="p-5 rounded-3 text-center text-white"
+                style="background: linear-gradient(135deg, #1A7E3E 0%, #156332 100%);">
+                <h1 class="display-4 fw-bold bangla mb-3">বইয়ের জগতে স্বাগতম</h1>
+                <p class="lead bangla mb-4">হাজারো বই, সেরা দাম এবং দ্রুত ডেলিভারি। আপনার পছন্দের বই এখনই কিনুন!</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <button class="btn btn-light btn-lg text-success fw-bold bangla"
+                        onclick="window.location.href='books.html'">
+                        <i class="fas fa-book me-2"></i> বই দেখুন
                     </button>
-                    <button class="btn btn-secondary bangla">
-                        <i class="fas fa-fire"></i> আজকের অফার
+                    <button class="btn btn-outline-light btn-lg fw-bold bangla">
+                        <i class="fas fa-fire me-2"></i> আজকের অফার
                     </button>
                 </div>
             </div>
@@ -92,138 +117,342 @@
     </section>
 
     <!-- Categories Section -->
-    <section class="section" id="categories">
+    <section class="py-5" id="categories">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title bangla">জনপ্রিয় ক্যাটাগরি</h2>
-                <a href="categories.html" class="bangla" style="color: var(--primary-color); font-weight: 600;">সব দেখুন
-                    <i class="fas fa-arrow-right"></i></a>
+            <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-primary pb-2">
+                <h2 class="h3 bangla fw-bold m-0">জনপ্রিয় ক্যাটাগরি</h2>
+                <a href="categories.html" class="text-primary text-decoration-none bangla fw-bold">সব দেখুন <i
+                        class="fas fa-arrow-right"></i></a>
             </div>
 
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">📚</div>
-                    <h3 class="category-name bangla">উপন্যাস</h3>
-                    <p class="category-count bangla">২,৪৫০টি বই</p>
+            <div class="row g-3">
+                <!-- Categories will be static for now -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 text-center p-3 border hover-shadow">
+                        <div class="display-4 mb-2">📚</div>
+                        <h5 class="bangla fw-bold">উপন্যাস</h5>
+                        <small class="text-muted bangla">২,৪৫০টি বই</small>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🕌</div>
-                    <h3 class="category-name bangla">ইসলামি বই</h3>
-                    <p class="category-count bangla">১,৮৫০টি বই</p>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 text-center p-3 border hover-shadow">
+                        <div class="display-4 mb-2">🕌</div>
+                        <h5 class="bangla fw-bold">ইসলামি বই</h5>
+                        <small class="text-muted bangla">১,৮৫০টি বই</small>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">📖</div>
-                    <h3 class="category-name bangla">একাডেমিক</h3>
-                    <p class="category-count bangla">৩,২৮০টি বই</p>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 text-center p-3 border hover-shadow">
+                        <div class="display-4 mb-2">📖</div>
+                        <h5 class="bangla fw-bold">একাডেমিক</h5>
+                        <small class="text-muted bangla">৩,২৮০টি বই</small>
+                    </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-icon">🎨</div>
-                    <h3 class="category-name bangla">শিল্প ও সংস্কৃতি</h3>
-                    <p class="category-count bangla">৬৫০টি বই</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">💼</div>
-                    <h3 class="category-name bangla">ব্যবসায়</h3>
-                    <p class="category-count bangla">৮৯০টি বই</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🧠</div>
-                    <h3 class="category-name bangla">আত্ম-উন্নয়ন</h3>
-                    <p class="category-count bangla">১,১০০টি বই</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">🎭</div>
-                    <h3 class="category-name bangla">রহস্য ও গোয়েন্দা</h3>
-                    <p class="category-count bangla">৯৮০টি বই</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">👶</div>
-                    <h3 class="category-name bangla">শিশু-কিশোর</h3>
-                    <p class="category-count bangla">১,৫৫০টি বই</p>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card h-100 text-center p-3 border hover-shadow">
+                        <div class="display-4 mb-2">👶</div>
+                        <h5 class="bangla fw-bold">শিশু-কিশোর</h5>
+                        <small class="text-muted bangla">১,৫৫০টি বই</small>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Bestsellers Section -->
-    <section class="section" id="bestsellers">
+    <section class="py-5 bg-light" id="bestsellers">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title bangla">সপ্তাহের বেস্টসেলার</h2>
-                <a href="books.html" class="bangla" style="color: var(--primary-color); font-weight: 600;">সব দেখুন <i
+            <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-primary pb-2">
+                <h2 class="h3 bangla fw-bold m-0">সপ্তাহের বেস্টসেলার</h2>
+                <a href="books.html" class="text-primary text-decoration-none bangla fw-bold">সব দেখুন <i
                         class="fas fa-arrow-right"></i></a>
             </div>
 
-            <div class="books-grid" id="booksGrid">
+            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3" id="booksGrid">
                 <!-- Books will be loaded dynamically -->
             </div>
         </div>
     </section>
 
     <!-- Authors Section -->
-    <section class="section" id="authors">
+    <section class="py-5" id="authors">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title bangla">জনপ্রিয় লেখক</h2>
-                <a href="authors.html" class="bangla" style="color: var(--primary-color); font-weight: 600;">সব দেখুন <i
+            <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-primary pb-2">
+                <h2 class="h3 bangla fw-bold m-0">জনপ্রিয় লেখক</h2>
+                <a href="authors.html" class="text-primary text-decoration-none bangla fw-bold">সব দেখুন <i
                         class="fas fa-arrow-right"></i></a>
             </div>
 
-            <div class="authors-grid" id="authorsGrid">
+            <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3" id="authorsGrid">
                 <!-- Authors will be loaded dynamically -->
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 class="bangla"><i class="fas fa-book-open"></i> রকমারি</h3>
-                    <p class="bangla">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান। ২০১৩ সাল থেকে বই প্রেমীদের সেবায়
-                        নিয়োজিত।</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3 class="h5 bangla mb-3"><i class="fas fa-book-open"></i> রকমারি</h3>
+                    <p class="bangla small text-white-50">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান। ২০১৩ সাল থেকে বই
+                        প্রেমীদের সেবায় নিয়োজিত।</p>
                 </div>
 
-                <div class="footer-section">
-                    <h3 class="bangla">সম্পর্কে</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" class="bangla">আমাদের সম্পর্কে</a></li>
-                        <li><a href="#" class="bangla">যোগাযোগ</a></li>
-                        <li><a href="#" class="bangla">ক্যারিয়ার</a></li>
-                        <li><a href="#" class="bangla">প্রেস</a></li>
+                <div class="col-6 col-md-2">
+                    <h3 class="h5 bangla mb-3">সম্পর্কে</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">যোগাযোগ</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">ক্যারিয়ার</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h3 class="bangla">কাস্টমার সার্ভিস</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" class="bangla">সাহায্য কেন্দ্র</a></li>
-                        <li><a href="#" class="bangla">ডেলিভারি তথ্য</a></li>
-                        <li><a href="#" class="bangla">রিটার্ন পলিসি</a></li>
-                        <li><a href="#" class="bangla">অর্ডার ট্র্যাক</a></li>
+                <div class="col-6 col-md-2">
+                    <h3 class="h5 bangla mb-3">সাহায্য</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">ডেলিভারি তথ্য</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">রিটার্ন পলিসি</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">অর্ডার ট্র্যাক</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-section">
-                    <h3 class="bangla">ফলো করুন</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    </ul>
+                <div class="col-md-4">
+                    <h3 class="h5 bangla mb-3">ফলো করুন</h3>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p class="bangla">&copy; ২০২৪ রকমারি ডট কম। সর্বস্বত্ব সংরক্ষিত। বই প্রেমীদের জন্য <i
-                        class="fas fa-heart" style="color: #FF6B2C;"></i> দিয়ে তৈরি।</p>
-            </div>
-        </div>
-    </footer>
+            <div class="border-top border-secondary mt-4 pt-3 text-center">
+                <!-- Main Header -->
+                <header class="sticky-top bg-white shadow-sm">
+                    <div class="container py-3">
+                        <div class="row align-items-center g-3">
+                            <!-- Logo -->
+                            <div class="col-6 col-md-3">
+                                <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2">
+                                    <i class="fas fa-book-open text-success fs-2"></i>
+                                    <span class="fs-3 fw-bold text-primary bangla">রকমারি</span>
+                                </a>
+                            </div>
 
-    <script src="assets/js/main.js"></script>
+                            <!-- Search Bar -->
+                            <div class="col-12 col-md-6 order-3 order-md-2">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-primary search-input bangla"
+                                        placeholder="বই, লেখক বা ISBN সার্চ করুন...">
+                                    <button class="btn btn-primary bangla" type="button">
+                                        <i class="fas fa-search"></i> সার্চ
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Icons -->
+                            <div class="col-6 col-md-3 order-2 order-md-3 text-end">
+                                <button class="btn btn-link text-dark position-relative me-2">
+                                    <i class="fas fa-heart fs-4"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">3</span>
+                                </button>
+                                <button class="btn btn-link text-dark position-relative" id="cartBtn">
+                                    <i class="fas fa-shopping-cart fs-4"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
+                                        id="cartCount">0</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light border-top">
+                        <div class="container">
+                            <button class="navbar-toggler w-100" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav">
+                                <span class="navbar-toggler-icon"></span> <span class="bangla ms-2">মেনু</span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav mx-auto gap-3">
+                                    <li class="nav-item"><a href="index.html"
+                                            class="nav-link bangla fw-bold active">হোম</a></li>
+                                    <li class="nav-item"><a href="categories.html"
+                                            class="nav-link bangla fw-bold">ক্যাটাগরি</a>
+                                    </li>
+                                    <li class="nav-item"><a href="books.html" class="nav-link bangla fw-bold">বই</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#bestsellers"
+                                            class="nav-link bangla fw-bold">বেস্টসেলার</a></li>
+                                    <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#" class="nav-link bangla fw-bold">স্পেশাল অফার</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+
+                <!-- Hero Section -->
+                <section class="py-5 bg-white">
+                    <div class="container">
+                        <div class="p-5 rounded-3 text-center text-white"
+                            style="background: linear-gradient(135deg, #1A7E3E 0%, #156332 100%);">
+                            <h1 class="display-4 fw-bold bangla mb-3">বইয়ের জগতে স্বাগতম</h1>
+                            <p class="lead bangla mb-4">হাজারো বই, সেরা দাম এবং দ্রুত ডেলিভারি। আপনার পছন্দের বই এখনই
+                                কিনুন!</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <button class="btn btn-light btn-lg text-success fw-bold bangla"
+                                    onclick="window.location.href='books.html'">
+                                    <i class="fas fa-book me-2"></i> বই দেখুন
+                                </button>
+                                <button class="btn btn-outline-light btn-lg fw-bold bangla">
+                                    <i class="fas fa-fire me-2"></i> আজকের অফার
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Categories Section -->
+                <section class="py-5" id="categories">
+                    <div class="container">
+                        <div
+                            class="d-flex justify-content-between align-items-center mb-4 border-bottom border-primary pb-2">
+                            <h2 class="h3 bangla fw-bold m-0">জনপ্রিয় ক্যাটাগরি</h2>
+                            <a href="categories.html" class="text-primary text-decoration-none bangla fw-bold">সব দেখুন
+                                <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="row g-3">
+                            <!-- Categories will be static for now -->
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="card h-100 text-center p-3 border hover-shadow">
+                                    <div class="display-4 mb-2">📚</div>
+                                    <h5 class="bangla fw-bold">উপন্যাস</h5>
+                                    <small class="text-muted bangla">২,৪৫০টি বই</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="card h-100 text-center p-3 border hover-shadow">
+                                    <div class="display-4 mb-2">🕌</div>
+                                    <h5 class="bangla fw-bold">ইসলামি বই</h5>
+                                    <small class="text-muted bangla">১,৮৫০টি বই</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="card h-100 text-center p-3 border hover-shadow">
+                                    <div class="display-4 mb-2">📖</div>
+                                    <h5 class="bangla fw-bold">একাডেমিক</h5>
+                                    <small class="text-muted bangla">৩,২৮০টি বই</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="card h-100 text-center p-3 border hover-shadow">
+                                    <div class="display-4 mb-2">👶</div>
+                                    <h5 class="bangla fw-bold">শিশু-কিশোর</h5>
+                                    <small class="text-muted bangla">১,৫৫০টি বই</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bestsellers Section -->
+                <section class="py-5 bg-light" id="bestsellers">
+                    <div class="container">
+                        <div
+                            class="d-flex justify-content-between align-items-center mb-4 border-bottom border-primary pb-2">
+                            <h2 class="h3 bangla fw-bold m-0">সপ্তাহের বেস্টসেলার</h2>
+                            <a href="books.html" class="text-primary text-decoration-none bangla fw-bold">সব দেখুন <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3" id="booksGrid">
+                            <!-- Books will be loaded dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Authors Section -->
+                <section class="py-5" id="authors">
+                    <div class="container">
+                        <div
+                            class="d-flex justify-content-between align-items-center mb-4 border-bottom border-primary pb-2">
+                            <h2 class="h3 bangla fw-bold m-0">জনপ্রিয় লেখক</h2>
+                            <a href="authors.html" class="text-primary text-decoration-none bangla fw-bold">সব দেখুন <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3" id="authorsGrid">
+                            <!-- Authors will be loaded dynamically -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+                    <div class="container">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <h3 class="h5 bangla mb-3"><i class="fas fa-book-open"></i> রকমারি</h3>
+                                <p class="bangla small text-white-50">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান। ২০১৩
+                                    সাল থেকে বই
+                                    প্রেমীদের সেবায় নিয়োজিত।</p>
+                            </div>
+
+                            <div class="col-6 col-md-2">
+                                <h3 class="h5 bangla mb-3">সম্পর্কে</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-white-50 text-decoration-none bangla small">আমাদের
+                                            সম্পর্কে</a></li>
+                                    <li><a href="#" class="text-white-50 text-decoration-none bangla small">যোগাযোগ</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="text-white-50 text-decoration-none bangla small">ক্যারিয়ার</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-6 col-md-2">
+                                <h3 class="h5 bangla mb-3">সাহায্য</h3>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-white-50 text-decoration-none bangla small">ডেলিভারি
+                                            তথ্য</a></li>
+                                    <li><a href="#" class="text-white-50 text-decoration-none bangla small">রিটার্ন
+                                            পলিসি</a></li>
+                                    <li><a href="#" class="text-white-50 text-decoration-none bangla small">অর্ডার
+                                            ট্র্যাক</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h3 class="h5 bangla mb-3">ফলো করুন</h3>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                                    <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                                    <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                                    <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-top border-secondary mt-4 pt-3 text-center">
+                            <p class="bangla small text-white-50 mb-0">&copy; ২০২৪ রকমারি ডট কম। সর্বস্বত্ব সংরক্ষিত।
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- jQuery -->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <!-- Bootstrap JS -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <!-- Custom JS -->
+                <script src="assets/js/main.js"></script>
 </body>
 
 </html>
