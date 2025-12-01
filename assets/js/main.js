@@ -177,9 +177,16 @@ function createBookCard(book) {
   
   const card = `
     <div class="card h-100 book-card border-0 shadow-sm" data-id="${book.id}" data-aos="fade-up" data-aos-duration="600">
-      <div class="position-relative">
+      <div class="position-relative group">
         <img src="${book.image}" alt="${book.title}" class="card-img-top book-image">
         <span class="position-absolute top-0 end-0 m-2 badge bg-danger bangla">${book.badge}</span>
+        
+        <!-- Quick View Button -->
+        <button class="btn btn-light rounded-circle shadow position-absolute top-50 start-50 translate-middle quick-view-btn" 
+                style="opacity: 0; transition: all 0.3s; transform: translate(-50%, -50%) scale(0.8);"
+                title="Quick View">
+            <i class="fas fa-eye text-primary"></i>
+        </button>
       </div>
       <div class="card-body p-2 d-flex flex-column">
         <h5 class="card-title book-title bangla mb-1" title="${book.title}">${book.title}</h5>
@@ -207,9 +214,39 @@ function createBookCard(book) {
   
   col.html(card);
   
+  // Hover effect for Quick View button
+  col.find('.book-card').hover(
+    function() { $(this).find('.quick-view-btn').css({opacity: 1, transform: 'translate(-50%, -50%) scale(1)'}); },
+    function() { $(this).find('.quick-view-btn').css({opacity: 0, transform: 'translate(-50%, -50%) scale(0.8)'}); }
+  );
+
+  // Quick View Button Click
+  col.find('.quick-view-btn').on('click', function(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    
+    // Populate Modal Data
+    $('#qvImage').attr('src', book.image);
+    $('#qvTitle').text(book.title);
+    $('#qvAuthor').text(book.author);
+    $('#qvPrice').text('৳' + toBengaliNumber(book.price));
+    $('#qvOriginalPrice').text('৳' + toBengaliNumber(book.originalPrice));
+    $('#qvDiscountBadge').text(book.badge);
+    
+    // Set Add to Cart Button Action
+    $('#qvAddToCartBtn').off('click').on('click', function() {
+        addToCart(book.id);
+        $('#quickViewModal').modal('hide');
+    });
+
+    // Show Modal
+    const quickViewModal = new bootstrap.Modal(document.getElementById('quickViewModal'));
+    quickViewModal.show();
+  });
+  
   // Add click event for card navigation
   col.find('.book-card').on('click', function(e) {
-    if (!$(e.target).closest('.add-to-cart-btn').length) {
+    if (!$(e.target).closest('.add-to-cart-btn, .quick-view-btn').length) {
       window.location.href = `book-details.html?id=${book.id}`;
     }
   });
@@ -326,4 +363,90 @@ $(document).ready(function() {
   $('a[href="#"]').on('click', function(e) {
     e.preventDefault();
   });
+
+  // --- Advanced Filtering & Sorting Logic ---
+
+  function filterAndSortBooks() {
+    // Only run on books page
+    if ($('#booksGrid').length === 0 || window.location.pathname.indexOf('books.html') === -1) return;
+
+    let filteredBooks = [...booksData];
+
+    // Category Filter
+    const selectedCategories = $('.filter-checkbox[data-type="category"]:checked').map(function() {
+        return $(this).val();
+    }).get();
+
+    if (selectedCategories.length > 0) {
+        filteredBooks = filteredBooks.filter(book => selectedCategories.includes(book.category));
+    }
+
+    // Author Filter
+    const selectedAuthors = $('.filter-checkbox[data-type="author"]:checked').map(function() {
+        return $(this).val();
+    }).get();
+
+    if (selectedAuthors.length > 0) {
+        filteredBooks = filteredBooks.filter(book => selectedAuthors.includes(book.author));
+    }
+
+    // Price Filter
+    const minPrice = parseInt($('#minPrice').val()) || 0;
+    const maxPrice = parseInt($('#maxPrice').val()) || Infinity;
+
+    if (minPrice > 0 || maxPrice < Infinity) {
+        filteredBooks = filteredBooks.filter(book => book.price >= minPrice && book.price <= maxPrice);
+    }
+
+    // Sorting
+    const sortValue = $('#sortBooks').val();
+    if (sortValue === 'price-asc') {
+        filteredBooks.sort((a, b) => a.price - b.price);
+    } else if (sortValue === 'price-desc') {
+        filteredBooks.sort((a, b) => b.price - a.price);
+    } else if (sortValue === 'rating') {
+        filteredBooks.sort((a, b) => b.rating - a.rating);
+    } else if (sortValue === 'latest') {
+         filteredBooks.sort((a, b) => b.id - a.id);
+    }
+
+    // Update Grid
+    const $booksGrid = $('#booksGrid');
+    $booksGrid.empty(); // Clear existing books
+    
+    // Update Count
+    const countText = toBengaliNumber(filteredBooks.length);
+    // Try to find the count element, if not exists, we might need to add ID in HTML or select by context
+    // In books.html we added id="totalBooksCount"
+    $('#totalBooksCount').text(countText);
+
+    if (filteredBooks.length === 0) {
+        $booksGrid.html('<div class="col-12 text-center py-5"><h4 class="text-muted bangla">দুঃখিত, কোনো বই পাওয়া যায়নি।</h4><button class="btn btn-outline-primary bangla mt-2" id="resetFilters">ফিল্টার রিসেট করুন</button></div>');
+        
+        $('#resetFilters').on('click', function() {
+            $('.filter-checkbox').prop('checked', false);
+            $('#minPrice, #maxPrice').val('');
+            $('#sortBooks').val('default');
+            filterAndSortBooks();
+        });
+        return;
+    }
+
+    $.each(filteredBooks, function(index, book) {
+        const $bookCard = createBookCard(book);
+        $booksGrid.append($bookCard);
+    });
+  }
+
+  // Event Listeners for Filters
+  $('.filter-checkbox').on('change', filterAndSortBooks);
+  $('#applyPriceFilter').on('click', filterAndSortBooks);
+  $('#sortBooks').on('change', filterAndSortBooks);
+  
+  // Initial call if on books page
+  if (window.location.pathname.indexOf('books.html') !== -1) {
+      // Update initial count
+      $('#totalBooksCount').text(toBengaliNumber(booksData.length));
+  }
+
 });
