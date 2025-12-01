@@ -170,7 +170,8 @@ function createBookItem(book) {
     <div class="book-item text-center" data-id="${book.id}" style="cursor: pointer;">
       <div class="position-relative mb-2">
         <img src="${book.image}" alt="${book.title}" class="img-fluid book-image" style="height: 200px; object-fit: contain;">
-        <span class="position-absolute top-0 end-0 m-1 badge bg-danger bangla small">${book.badge}</span>
+        <span class="position-absolute top-0 start-0 m-1 badge bg-danger bangla small">${toBengaliNumber(book.discount)}% ছাড়</span>
+        <span class="position-absolute top-0 end-0 m-1 badge bg-success bangla small">${book.badge}</span>
       </div>
       <h6 class="book-title bangla mb-1 text-truncate" title="${book.title}">${book.title}</h6>
       <p class="text-muted small mb-1 bangla">${book.author}</p>
