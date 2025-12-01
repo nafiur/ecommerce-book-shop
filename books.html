@@ -143,13 +143,11 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-top d-none d-lg-block">
             <div class="container">
                 <ul class="navbar-nav mx-auto gap-3">
-                    <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold">হোম</a>
-                    </li>
+                    <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold">হোম</a></li>
                     <li class="nav-item"><a href="categories.html" class="nav-link bangla fw-bold">ক্যাটাগরি</a></li>
                     <li class="nav-item"><a href="books.html" class="nav-link bangla fw-bold active">বই</a></li>
                     <li class="nav-item"><a href="#bestsellers" class="nav-link bangla fw-bold">বেস্টসেলার</a></li>
-                    <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a>
-                    </li>
+                    <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a></li>
                     <li class="nav-item"><a href="#" class="nav-link bangla fw-bold">স্পেশাল অফার</a></li>
                 </ul>
             </div>
@@ -271,7 +269,7 @@
                     <div
                         class="card-body d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                         <div class="bangla text-muted">
-                            <strong>১২</strong> টি বই পাওয়া গেছে
+                            <strong>১০</strong> টি বই পাওয়া গেছে
                         </div>
                         <div class="d-flex align-items-center gap-3 w-100 w-md-auto">
                             <span class="bangla text-nowrap">সাজান:</span>
@@ -290,13 +288,17 @@
                     </div>
                 </div>
 
-                <!-- Books Grid -->
-                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3" id="booksGrid">
-                    <!-- Books will be loaded by JavaScript -->
+                <!-- Books Grid - Inside a Big Card -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-3">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3" id="booksGrid">
+                            <!-- Books will be loaded by JavaScript -->
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Pagination -->
-                <nav class="mt-5">
+                <nav class="mt-4">
                     <ul class="pagination justify-content-center bangla">
                         <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
