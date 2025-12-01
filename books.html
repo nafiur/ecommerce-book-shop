@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বই - বইয়ের বাড়ি ডট কম</title>
+    <meta name="description" content="বইয়ের বাড়ি ডট কম - বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।">
+    <title>বই - বইয়ের বাড়ি ডট কম</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
@@ -21,7 +24,7 @@
     <!-- Mobile Offcanvas Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-header">
-            <h5 class="bangla mb-0"><i class="fas fa-book-open me-2"></i>বইয়ের বাড়ি</h5>
+            <h5 class="bangla mb-0"><i class="fas fa-book-open me-2"></i>বইয়ের বাড়ি</h5>
             <button class="mobile-menu-close">
                 <i class="fas fa-times"></i>
             </button>
@@ -82,7 +85,8 @@
                         support@boierbari.com</a>
                 </div>
                 <div class="d-flex gap-3">
-                    <a href="#" class="text-white text-decoration-none bangla"><i class="fas fa-truck"></i> অর্ডার
+                    <a href="order-tracking.html" class="text-white text-decoration-none bangla"><i
+                            class="fas fa-truck"></i> অর্ডার
                         ট্র্যাক করুন</a>
                     <a href="#" class="text-white text-decoration-none bangla"><i class="fas fa-user"></i> একাউন্ট</a>
                 </div>
@@ -104,7 +108,7 @@
                     <!-- Logo -->
                     <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2">
                         <i class="fas fa-book-open text-success fs-2"></i>
-                        <span class="fs-3 fw-bold text-primary bangla">বইয়ের বাড়ি</span>
+                        <span class="fs-3 fw-bold text-primary bangla">বইয়ের বাড়ি</span>
                     </a>
                 </div>
 
@@ -139,11 +143,13 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-top d-none d-lg-block">
             <div class="container">
                 <ul class="navbar-nav mx-auto gap-3">
-                    <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold">হোম</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link bangla fw-bold">হোম</a>
+                    </li>
                     <li class="nav-item"><a href="categories.html" class="nav-link bangla fw-bold">ক্যাটাগরি</a></li>
                     <li class="nav-item"><a href="books.html" class="nav-link bangla fw-bold active">বই</a></li>
                     <li class="nav-item"><a href="#bestsellers" class="nav-link bangla fw-bold">বেস্টসেলার</a></li>
-                    <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a></li>
+                    <li class="nav-item"><a href="authors.html" class="nav-link bangla fw-bold">লেখক</a>
+                    </li>
                     <li class="nav-item"><a href="#" class="nav-link bangla fw-bold">স্পেশাল অফার</a></li>
                 </ul>
             </div>
@@ -185,37 +191,26 @@
                             <ul class="list-unstyled bangla mb-0">
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat1"
-                                            data-type="category" value="উপন্যাস">
-                                        <label class="form-check-label" for="cat1">উপন্যাস</label>
+                                        <input class="form-check-input" type="checkbox" id="cat1">
+                                        <label class="form-check-label" for="cat1">উপন্যাস (২,৪৫০)</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat2"
-                                            data-type="category" value="ইসলামি">
-                                        <label class="form-check-label" for="cat2">ইসলামি বই</label>
+                                        <input class="form-check-input" type="checkbox" id="cat2">
+                                        <label class="form-check-label" for="cat2">ইসলামি বই (১,৮৫০)</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat3"
-                                            data-type="category" value="একাডেমিক">
-                                        <label class="form-check-label" for="cat3">একাডেমিক</label>
+                                        <input class="form-check-input" type="checkbox" id="cat3">
+                                        <label class="form-check-label" for="cat3">একাডেমিক (৩,২৮০)</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat4"
-                                            data-type="category" value="কবিতা">
-                                        <label class="form-check-label" for="cat4">কবিতা</label>
-                                    </div>
-                                </li>
-                                <li class="mb-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat5"
-                                            data-type="category" value="ইতিহাস">
-                                        <label class="form-check-label" for="cat5">ইতিহাস</label>
+                                        <input class="form-check-input" type="checkbox" id="cat4">
+                                        <label class="form-check-label" for="cat4">রহস্য ও গোয়েন্দা (৯৮০)</label>
                                     </div>
                                 </li>
                             </ul>
@@ -231,30 +226,20 @@
                             <ul class="list-unstyled bangla mb-0">
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author1"
-                                            data-type="author" value="হুমায়ূন আহমেদ">
-                                        <label class="form-check-label" for="author1">হুমায়ূন আহমেদ</label>
+                                        <input class="form-check-input" type="checkbox" id="author1">
+                                        <label class="form-check-label" for="author1">হুমায়ূন আহমেদ (২৪৫)</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author2"
-                                            data-type="author" value="আরিফ আজাদ">
-                                        <label class="form-check-label" for="author2">আরিফ আজাদ</label>
+                                        <input class="form-check-input" type="checkbox" id="author2">
+                                        <label class="form-check-label" for="author2">মুহম্মদ জাফর ইকবাল (১১৮)</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author3"
-                                            data-type="author" value="রবীন্দ্রনাথ ঠাকুর">
-                                        <label class="form-check-label" for="author3">রবীন্দ্রনাথ ঠাকুর</label>
-                                    </div>
-                                </li>
-                                <li class="mb-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author4"
-                                            data-type="author" value="কাজী নজরুল ইসলাম">
-                                        <label class="form-check-label" for="author4">কাজী নজরুল ইসলাম</label>
+                                        <input class="form-check-input" type="checkbox" id="author3">
+                                        <label class="form-check-label" for="author3">রবীন্দ্রনাথ ঠাকুর (৫৩২)</label>
                                     </div>
                                 </li>
                             </ul>
@@ -268,14 +253,12 @@
                         </div>
                         <div class="card-body">
                             <div class="d-flex gap-2 align-items-center mb-3">
-                                <input type="number" class="form-control form-control-sm bangla" id="minPrice"
+                                <input type="number" class="form-control form-control-sm bangla"
                                     placeholder="সর্বনিম্ন">
                                 <span>-</span>
-                                <input type="number" class="form-control form-control-sm bangla" id="maxPrice"
-                                    placeholder="সর্বোচ্চ">
+                                <input type="number" class="form-control form-control-sm bangla" placeholder="সর্বোচ্চ">
                             </div>
-                            <button class="btn btn-primary btn-sm w-100 bangla" id="applyPriceFilter">প্রয়োগ
-                                করুন</button>
+                            <button class="btn btn-primary btn-sm w-100 bangla">প্রয়োগ করুন</button>
                         </div>
                     </div>
                 </div>
@@ -288,15 +271,15 @@
                     <div
                         class="card-body d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                         <div class="bangla text-muted">
-                            <strong id="totalBooksCount">0</strong> টি বই পাওয়া গেছে
+                            <strong>১২</strong> টি বই পাওয়া গেছে
                         </div>
                         <div class="d-flex align-items-center gap-3 w-100 w-md-auto">
                             <span class="bangla text-nowrap">সাজান:</span>
-                            <select class="form-select form-select-sm bangla" id="sortBooks">
-                                <option value="default">জনপ্রিয়তা</option>
-                                <option value="price-asc">মূল্য: কম থেকে বেশি</option>
-                                <option value="price-desc">মূল্য: বেশি থেকে কম</option>
-                                <option value="rating">রেটিং</option>
+                            <select class="form-select form-select-sm bangla">
+                                <option>জনপ্রিয়তা</option>
+                                <option>সর্বশেষ</option>
+                                <option>মূল্য: কম থেকে বেশি</option>
+                                <option>মূল্য: বেশি থেকে কম</option>
                             </select>
                             <div class="btn-group">
                                 <button class="btn btn-outline-secondary btn-sm active"><i
@@ -332,35 +315,54 @@
         </div>
     </div>
 
-    <!-- Footer (Same as index.html) -->
+    <!-- Footer -->
     <footer class="bg-dark text-white pt-5 pb-3 mt-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <h3 class="h5 bangla mb-3"><i class="fas fa-book-open"></i> বইয়ের বাড়ি</h3>
-                    <p class="bangla small text-white-50">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান।</p>
+                    <h3 class="h5 bangla mb-3"><i class="fas fa-book-open"></i> বইয়ের বাড়ি</h3>
+                    <p class="bangla small text-white-50">বাংলাদেশের সবচেয়ে বড় অনলাইন বইয়ের দোকান। ২০১৩
+                        সাল থেকে বই
+                        প্রেমীদের সেবায় নিয়োজিত।</p>
                 </div>
+
                 <div class="col-6 col-md-2">
-                    <h3 class="h5 bangla mb-3">কুইক লিংক</h3>
+                    <h3 class="h5 bangla mb-3">সম্পর্কে</h3>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white-50 text-decoration-none bangla small">হোম</a></li>
-                        <li><a href="categories.html"
-                                class="text-white-50 text-decoration-none bangla small">ক্যাটাগরি</a></li>
-                        <li><a href="books.html" class="text-white-50 text-decoration-none bangla small">বই</a></li>
-                        <li><a href="authors.html" class="text-white-50 text-decoration-none bangla small">লেখক</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">আমাদের
+                                সম্পর্কে</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">যোগাযোগ</a>
+                        </li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">ক্যারিয়ার</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 ms-auto">
+
+                <div class="col-6 col-md-2">
+                    <h3 class="h5 bangla mb-3">সাহায্য</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">ডেলিভারি
+                                তথ্য</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">রিটার্ন
+                                পলিসি</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none bangla small">অর্ডার
+                                ট্র্যাক</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
                     <h3 class="h5 bangla mb-3">ফলো করুন</h3>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
                         <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
                         <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
                     </div>
                 </div>
             </div>
+
             <div class="border-top border-secondary mt-4 pt-3 text-center">
-                <p class="bangla small text-white-50 mb-0">&copy; ২০২৪ বইয়ের বাড়ি ডট কম। সর্বস্বত্ব সংরক্ষিত।</p>
+                <p class="bangla small text-white-50 mb-0">&copy; ২০২৪ বইয়ের বাড়ি ডট কম। সর্বস্বত্ব
+                    সংরক্ষিত।</p>
             </div>
         </div>
     </footer>
@@ -369,6 +371,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
 </body>
