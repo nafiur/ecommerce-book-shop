@@ -301,6 +301,57 @@
         </div>
     </footer>
 
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-5">
+                    <div class="row">
+                        <div class="col-md-5 text-center">
+                            <img src="" id="qvImage" class="img-fluid rounded shadow-sm" alt="Book Cover"
+                                style="max-height: 350px;">
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <span class="badge bg-danger mb-2" id="qvDiscountBadge"></span>
+                            <h2 class="bangla fw-bold mb-1" id="qvTitle"></h2>
+                            <p class="text-muted bangla mb-3" id="qvAuthor"></p>
+
+                            <div class="mb-3">
+                                <span class="h4 fw-bold text-primary bangla" id="qvPrice"></span>
+                                <span class="text-muted text-decoration-line-through ms-2 bangla"
+                                    id="qvOriginalPrice"></span>
+                            </div>
+
+                            <p class="bangla text-muted small mb-4" id="qvDescription">
+                                এই বইটি সম্পর্কে বিস্তারিত তথ্য শীঘ্রই যুক্ত করা হবে। বইটি এখনই অর্ডার করতে 'কার্টে যোগ
+                                করুন' বাটনে ক্লিক করুন।
+                            </p>
+
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary bangla flex-grow-1" id="qvAddToCartBtn">
+                                    <i class="fas fa-shopping-cart me-2"></i> কার্টে যোগ করুন
+                                </button>
+                                <button class="btn btn-outline-secondary" id="qvWishlistBtn">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+
+                            <div class="mt-4 border-top pt-3">
+                                <p class="small mb-1"><strong class="bangla">ক্যাটাগরি:</strong> <span
+                                        class="bangla text-muted">উপন্যাস</span></p>
+                                <p class="small mb-0"><strong class="bangla">স্টক:</strong> <span
+                                        class="text-success bangla">ইন স্টক</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap JS -->

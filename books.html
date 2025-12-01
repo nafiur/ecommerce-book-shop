@@ -185,26 +185,37 @@
                             <ul class="list-unstyled bangla mb-0">
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="cat1">
-                                        <label class="form-check-label" for="cat1">উপন্যাস (২,৪৫০)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat1"
+                                            data-type="category" value="উপন্যাস">
+                                        <label class="form-check-label" for="cat1">উপন্যাস</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="cat2">
-                                        <label class="form-check-label" for="cat2">ইসলামি বই (১,৮৫০)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat2"
+                                            data-type="category" value="ইসলামি">
+                                        <label class="form-check-label" for="cat2">ইসলামি বই</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="cat3">
-                                        <label class="form-check-label" for="cat3">একাডেমিক (৩,২৮০)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat3"
+                                            data-type="category" value="একাডেমিক">
+                                        <label class="form-check-label" for="cat3">একাডেমিক</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="cat4">
-                                        <label class="form-check-label" for="cat4">রহস্য ও গোয়েন্দা (৯৮০)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat4"
+                                            data-type="category" value="কবিতা">
+                                        <label class="form-check-label" for="cat4">কবিতা</label>
+                                    </div>
+                                </li>
+                                <li class="mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="cat5"
+                                            data-type="category" value="ইতিহাস">
+                                        <label class="form-check-label" for="cat5">ইতিহাস</label>
                                     </div>
                                 </li>
                             </ul>
@@ -220,20 +231,30 @@
                             <ul class="list-unstyled bangla mb-0">
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="author1">
-                                        <label class="form-check-label" for="author1">হুমায়ূন আহমেদ (২৪৫)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author1"
+                                            data-type="author" value="হুমায়ূন আহমেদ">
+                                        <label class="form-check-label" for="author1">হুমায়ূন আহমেদ</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="author2">
-                                        <label class="form-check-label" for="author2">মুহম্মদ জাফর ইকবাল (১১৮)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author2"
+                                            data-type="author" value="আরিফ আজাদ">
+                                        <label class="form-check-label" for="author2">আরিফ আজাদ</label>
                                     </div>
                                 </li>
                                 <li class="mb-2">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="author3">
-                                        <label class="form-check-label" for="author3">রবীন্দ্রনাথ ঠাকুর (৫৩২)</label>
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author3"
+                                            data-type="author" value="রবীন্দ্রনাথ ঠাকুর">
+                                        <label class="form-check-label" for="author3">রবীন্দ্রনাথ ঠাকুর</label>
+                                    </div>
+                                </li>
+                                <li class="mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input filter-checkbox" type="checkbox" id="author4"
+                                            data-type="author" value="কাজী নজরুল ইসলাম">
+                                        <label class="form-check-label" for="author4">কাজী নজরুল ইসলাম</label>
                                     </div>
                                 </li>
                             </ul>
@@ -247,12 +268,14 @@
                         </div>
                         <div class="card-body">
                             <div class="d-flex gap-2 align-items-center mb-3">
-                                <input type="number" class="form-control form-control-sm bangla"
+                                <input type="number" class="form-control form-control-sm bangla" id="minPrice"
                                     placeholder="সর্বনিম্ন">
                                 <span>-</span>
-                                <input type="number" class="form-control form-control-sm bangla" placeholder="সর্বোচ্চ">
+                                <input type="number" class="form-control form-control-sm bangla" id="maxPrice"
+                                    placeholder="সর্বোচ্চ">
                             </div>
-                            <button class="btn btn-primary btn-sm w-100 bangla">প্রয়োগ করুন</button>
+                            <button class="btn btn-primary btn-sm w-100 bangla" id="applyPriceFilter">প্রয়োগ
+                                করুন</button>
                         </div>
                     </div>
                 </div>
@@ -265,15 +288,15 @@
                     <div
                         class="card-body d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                         <div class="bangla text-muted">
-                            <strong>১২</strong> টি বই পাওয়া গেছে
+                            <strong id="totalBooksCount">0</strong> টি বই পাওয়া গেছে
                         </div>
                         <div class="d-flex align-items-center gap-3 w-100 w-md-auto">
                             <span class="bangla text-nowrap">সাজান:</span>
-                            <select class="form-select form-select-sm bangla">
-                                <option>জনপ্রিয়তা</option>
-                                <option>সর্বশেষ</option>
-                                <option>মূল্য: কম থেকে বেশি</option>
-                                <option>মূল্য: বেশি থেকে কম</option>
+                            <select class="form-select form-select-sm bangla" id="sortBooks">
+                                <option value="default">জনপ্রিয়তা</option>
+                                <option value="price-asc">মূল্য: কম থেকে বেশি</option>
+                                <option value="price-desc">মূল্য: বেশি থেকে কম</option>
+                                <option value="rating">রেটিং</option>
                             </select>
                             <div class="btn-group">
                                 <button class="btn btn-outline-secondary btn-sm active"><i
